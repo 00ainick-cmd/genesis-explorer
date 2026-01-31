@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-01-30T23:40:00Z",
+  "updated": "2026-01-31T01:56:00Z",
   "entries": [
     {
       "id": "conf-flag-001",
@@ -215,6 +215,21 @@
         "staleLockFix": "Check if PID in lock file is dead, then rm the lock file",
         "botTokens": "/home/ubuntu/.clawdbot/bot-tokens.json",
         "webhooks": "/home/ubuntu/.clawdbot/persona-webhooks.json"
+      }
+    },
+    {
+      "id": "contact-ashley-ring",
+      "title": "Ashley Ring - Collins Aerospace",
+      "category": "Contacts",
+      "tags": ["collins", "competition", "aviation", "workforce"],
+      "created": "2026-01-31",
+      "summary": "Competition co-lead from Collins Aerospace for student competition project.",
+      "content": {
+        "name": "Ashley Ring",
+        "organization": "Collins Aerospace",
+        "role": "Competition co-lead",
+        "project": "Student competition (with Nick)",
+        "notes": "Sent Nick list of remaining instructors to email for competition outreach."
       }
     }
   ]

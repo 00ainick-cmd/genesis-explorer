@@ -1,16 +1,16 @@
 {
-  "updated": "2026-01-31T00:50:00Z",
+  "updated": "2026-01-31T01:56:00Z",
   "description": "Concrete next actions - single steps, doable now",
   "items": [
     {
       "id": "na-001",
-      "action": "Email teachers the student competition HTML and training doc",
+      "action": "Email remaining teachers from Ashley Ring's list (student competition)",
       "context": "@computer",
       "project": "AEA",
       "due": "2026-01-31",
       "energy": "low",
       "time": "15min",
-      "notes": "Promised by end of week. Files already built in Claude."
+      "notes": "DONE: Neil Fulbright (Embry-Riddle), Marine instructor, Chai Sai Wong (SIU). TODO: Send same materials to new list from Ashley Ring (Collins)."
     },
     {
       "id": "na-002",
