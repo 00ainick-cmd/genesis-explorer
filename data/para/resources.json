@@ -1,0 +1,48 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Topics of interest and reference material",
+  "resources": [
+    {
+      "id": "res-001",
+      "topic": "Stoicism",
+      "description": "Philosophy for resilience and perspective",
+      "sources": ["Daily Stoic", "Meditations", "Letters from a Stoic"],
+      "notes": "Quotes welcome, videos not wanted"
+    },
+    {
+      "id": "res-002",
+      "topic": "Aviation Industry",
+      "description": "Workforce development, regulations, trends",
+      "sources": ["AEA", "FAA", "ATEC"],
+      "notes": "No aviation videos - text/articles only"
+    },
+    {
+      "id": "res-003",
+      "topic": "AI for Solopreneurs",
+      "description": "AI tools and workflows for content creators",
+      "sources": ["Josh Cavalier", "Dylan Davis"],
+      "notes": null
+    },
+    {
+      "id": "res-004",
+      "topic": "Japanese Language",
+      "description": "Actively learning",
+      "sources": ["Dogen", "Japanese Ammo with Misa"],
+      "notes": null
+    },
+    {
+      "id": "res-005",
+      "topic": "Sales & Persuasion",
+      "description": "StoryBrand, Straight Line, Never Split the Difference",
+      "sources": ["Donald Miller", "Jordan Belfort", "Chris Voss", "Alex Hormozi"],
+      "notes": "Wolf Den council covers this"
+    },
+    {
+      "id": "res-006",
+      "topic": "Assessment Design",
+      "description": "Creating quality test questions",
+      "sources": ["Patty Shank"],
+      "notes": "Gold standard for question quality"
+    }
+  ]
+}

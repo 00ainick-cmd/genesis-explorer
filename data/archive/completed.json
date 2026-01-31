@@ -1,0 +1,41 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Completed items - archived for reference",
+  "items": [
+    {
+      "id": "done-001",
+      "type": "project",
+      "name": "Genesis Data Layer",
+      "completed": "2026-01-30",
+      "notes": "Built weather, tasks, projects, quotes, history, learnings, council-context"
+    },
+    {
+      "id": "done-002",
+      "type": "project",
+      "name": "Morning Brief App",
+      "completed": "2026-01-30",
+      "notes": "Deployed to GitHub Pages"
+    },
+    {
+      "id": "done-003",
+      "type": "project",
+      "name": "Assessment Factory App",
+      "completed": "2026-01-30",
+      "notes": "Deployed to GitHub Pages"
+    },
+    {
+      "id": "done-004",
+      "type": "project",
+      "name": "Discord Council Bots",
+      "completed": "2026-01-30",
+      "notes": "5 councils: Titans, Wolf Den, Stoics, Opposition, Paddy's Pub"
+    },
+    {
+      "id": "done-005",
+      "type": "project",
+      "name": "Multi-bot Discord Architecture",
+      "completed": "2026-01-30",
+      "notes": "Separate Clawdbot instances on ports 18790, 18795, 18796, 18800"
+    }
+  ]
+}

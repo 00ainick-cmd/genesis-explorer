@@ -1,0 +1,76 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Concrete next actions - single steps, doable now",
+  "items": [
+    {
+      "id": "na-001",
+      "action": "Email teachers the student competition HTML and training doc",
+      "context": "@computer",
+      "project": "AEA",
+      "due": "2026-01-31",
+      "energy": "low",
+      "time": "15min",
+      "notes": "Promised by end of week. Files already built in Claude."
+    },
+    {
+      "id": "na-002",
+      "action": "Review Tom's email feedback on CAET Advanced",
+      "context": "@computer",
+      "project": "CAET",
+      "due": "2026-01-31",
+      "energy": "medium",
+      "time": "30min",
+      "notes": null
+    },
+    {
+      "id": "na-003",
+      "action": "Update DC questions on CAET Advanced",
+      "context": "@computer",
+      "project": "CAET",
+      "due": "2026-01-31",
+      "energy": "high",
+      "time": "1hr",
+      "notes": "Based on Tom's feedback"
+    },
+    {
+      "id": "na-004",
+      "action": "Send email to Crystal Maguire confirming ATEC speaking slot",
+      "context": "@computer",
+      "project": "AEA",
+      "due": "2026-01-31",
+      "energy": "low",
+      "time": "10min",
+      "notes": "ATEC Portland, March 31, 10:30 AM panel"
+    },
+    {
+      "id": "na-005",
+      "action": "Set up SGT Michael Schultz with ACE Avionics course access",
+      "context": "@computer",
+      "project": "ACE Avionics",
+      "due": "2026-01-31",
+      "energy": "low",
+      "time": "15min",
+      "notes": "First customer! Email: michael.txarng@gmail.com"
+    },
+    {
+      "id": "na-006",
+      "action": "Draft talking points for boss negotiation (extra week off)",
+      "context": "@computer",
+      "project": "Personal",
+      "due": "2026-02-02",
+      "energy": "high",
+      "time": "30min",
+      "notes": "Meeting Feb 3. Don't attack policy. Make him discover the problem. Emotional angle: middle school camp window."
+    },
+    {
+      "id": "na-007",
+      "action": "Text Patrick to reschedule NextOp meeting",
+      "context": "@phone",
+      "project": "AEA",
+      "due": "2026-02-01",
+      "energy": "low",
+      "time": "5min",
+      "notes": "Conflicts with Feb 3 acupuncture"
+    }
+  ]
+}

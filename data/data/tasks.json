@@ -1,0 +1,162 @@
+{
+  "updated": "2026-01-31T00:48:00Z",
+  "source": "genesis",
+  "high": [
+    {
+      "id": "0",
+      "title": "Email student competition HTML + training doc to teachers",
+      "project": "AEA",
+      "due": "2026-01-31",
+      "notes": "Built in Claude. Promised by end of week."
+    },
+    {
+      "id": "12",
+      "title": "CAET Advanced: Review Tom's feedback",
+      "project": "CAET",
+      "due": "2026-01-31",
+      "notes": null
+    },
+    {
+      "id": "13",
+      "title": "CAET Advanced: Update DC questions",
+      "project": "CAET",
+      "due": "2026-01-31",
+      "notes": null
+    },
+    {
+      "id": "14",
+      "title": "Respond to Crystal Maguire (ATEC conference)",
+      "project": "AEA",
+      "due": "2026-01-31",
+      "notes": "Confirm speaking at ATEC Portland March 29 - April 1. Panel: Modernizing the Mechanic ACS, Tue March 31 10:30 AM."
+    },
+    {
+      "id": "19",
+      "title": "FAA Meeting Feb 12 - prep slide deck, Mike's 9 questions, ASK",
+      "project": "AEA",
+      "due": "2026-02-10",
+      "notes": "Need: slide deck, answers to Mike's 9 questions, prep the ASK (equivalency letter)"
+    },
+    {
+      "id": "1",
+      "title": "Draft LOA Sustainer pitch deck",
+      "project": "LOA Sustainer",
+      "due": null
+    },
+    {
+      "id": "2",
+      "title": "Create DC 5E Lesson Plan",
+      "project": "CAET",
+      "due": null
+    },
+    {
+      "id": "3",
+      "title": "Build AC Circuits lab sheets",
+      "project": "CAET",
+      "due": null
+    },
+    {
+      "id": "4",
+      "title": "CAET Pro scenario questions",
+      "project": "CAET",
+      "due": null
+    },
+    {
+      "id": "5",
+      "title": "Boss negotiation - extra week off for daughter's camp",
+      "project": "Personal",
+      "due": "2026-02-03",
+      "notes": "Don't attack policy. Make him discover the problem. Emotional angle: middle school camp is once-in-her-life window."
+    }
+  ],
+  "medium": [
+    {
+      "id": "20",
+      "title": "Pitch Europe Regional (Cologne Oct 8-9) to boss",
+      "project": "AEA",
+      "due": null,
+      "notes": "Workforce development angle. Could combine with boss negotiation or keep separate."
+    },
+    {
+      "id": "18",
+      "title": "Give Ace voice file for voice cloning",
+      "project": "Infrastructure",
+      "due": null,
+      "notes": "For TTS/persona voices"
+    },
+    {
+      "id": "6",
+      "title": "Build CAET sales funnel + email sequence",
+      "project": "Marketing",
+      "due": null,
+      "notes": "526 MailerLite subscribers. Goal: market CAET certification. Use StoryBrand (Donald Miller) framework — Problem → Guide → Plan → Success. Need lead magnet, nurture sequence, sales page."
+    },
+    {
+      "id": "7",
+      "title": "Genealogy updates and next steps",
+      "project": "Genealogy",
+      "due": null
+    },
+    {
+      "id": "8",
+      "title": "Get SGT Michael Schultz set up with course access",
+      "project": "ACE Avionics",
+      "due": "2026-01-31",
+      "notes": "First customer! Signal Systems NCOIC, TX Army National Guard. Email: michael.txarng@gmail.com. Give him login/access to the course he bought."
+    },
+    {
+      "id": "9",
+      "title": "Update online training to v2",
+      "project": "CAET",
+      "due": null,
+      "notes": "ACE Avionics platform update"
+    },
+    {
+      "id": "15",
+      "title": "Book Portland flights + hotel for ATEC",
+      "project": "AEA",
+      "due": "2026-02-07",
+      "notes": "MCI → PDX Mon March 30 AM, return Wed April 1 PM. Hotel: Hilton Portland Downtown (conference venue)."
+    },
+    {
+      "id": "16",
+      "title": "Reschedule Patrick/NextOp meeting",
+      "project": "AEA",
+      "due": "2026-02-03",
+      "notes": "Conflicts with Feb 3 acupuncture appointment."
+    }
+  ],
+  "low": [
+    {
+      "id": "10",
+      "title": "Set up Vercel account for private deploys",
+      "project": "Infrastructure",
+      "due": null,
+      "notes": "Connect GitHub to Vercel for auto-deploy on push. Enables private repo hosting."
+    },
+    {
+      "id": "11",
+      "title": "Set up email-to-Discord forwarding (Zapier)",
+      "project": "Infrastructure",
+      "due": null,
+      "notes": "Webhook ready: https://discord.com/api/webhooks/1466786505002582089/... — just needs Zapier/IFTTT config from MacBook"
+    },
+    {
+      "id": "17",
+      "title": "GitHub auth setup",
+      "project": "Infrastructure",
+      "due": null,
+      "notes": "Started Jan 28, not finished."
+    }
+  ],
+  "waiting": [
+    {
+      "id": "w1",
+      "title": "Michael (MailerLite) - clarify campaign goals for marketing blasts",
+      "project": "Marketing",
+      "waitingSince": "2026-01-31",
+      "notes": "Need clarity before building CAET sales funnel"
+    }
+  ],
+  "status": "active"
+}

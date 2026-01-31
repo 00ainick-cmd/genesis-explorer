@@ -1,0 +1,85 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Active projects - multi-step outcomes with end dates",
+  "projects": [
+    {
+      "id": "proj-001",
+      "name": "FAA Meeting Prep",
+      "outcome": "Get new equivalency letter: CAET = Repairman Certificate (no +1 endorsement)",
+      "area": "CAET",
+      "due": "2026-02-12",
+      "status": "active",
+      "nextAction": "Answer Mike Adamson's 9 questions",
+      "tasks": [
+        "Answer Mike's 9 questions (draft at projects/faa-meeting/)",
+        "Build slide deck (~10 slides)",
+        "Pre-meeting with Ric (week of Feb 2)",
+        "Prep THE ASK talking points"
+      ],
+      "notes": "Key differentiator: CAET-Advanced has PQS practical + oral panel, not just written test."
+    },
+    {
+      "id": "proj-002",
+      "name": "Boss Negotiation - Extra Week Off",
+      "outcome": "Get approval for extra week off for Alexis's camp",
+      "area": "Personal",
+      "due": "2026-02-03",
+      "status": "active",
+      "nextAction": "Draft talking points",
+      "tasks": [
+        "Draft talking points (don't attack policy)",
+        "Prep emotional angle (middle school once-in-lifetime)",
+        "Have conversation Monday Feb 3"
+      ],
+      "notes": "Make him discover the problem. Don't lead with the ask."
+    },
+    {
+      "id": "proj-003",
+      "name": "ATEC Portland Speaking",
+      "outcome": "Deliver panel on 'Modernizing the Mechanic ACS'",
+      "area": "AEA",
+      "due": "2026-03-31",
+      "status": "active",
+      "nextAction": "Confirm with Crystal Maguire",
+      "tasks": [
+        "Respond to Crystal (confirm attendance)",
+        "Book flights MCI → PDX",
+        "Book Hilton Portland Downtown",
+        "Prep panel talking points",
+        "Coordinate with Rhonda Cooper and Michael Sasso"
+      ],
+      "notes": "Panel: Tue March 31, 10:30 AM. Competency-based training, Bloom's Taxonomy."
+    },
+    {
+      "id": "proj-004",
+      "name": "CAET Advanced Update",
+      "outcome": "Updated CAET Advanced with Tom's feedback incorporated",
+      "area": "CAET",
+      "due": "2026-02-07",
+      "status": "active",
+      "nextAction": "Review Tom's email feedback",
+      "tasks": [
+        "Review Tom's feedback email",
+        "Update DC questions",
+        "Test updated content"
+      ],
+      "notes": null
+    },
+    {
+      "id": "proj-005",
+      "name": "CAET Sales Funnel",
+      "outcome": "Working email funnel that converts subscribers to CAET signups",
+      "area": "Marketing",
+      "due": null,
+      "status": "planning",
+      "nextAction": "Clarify campaign goals with Michael (MailerLite)",
+      "tasks": [
+        "Get campaign goals from Michael",
+        "Create lead magnet",
+        "Write nurture sequence (StoryBrand framework)",
+        "Build sales page"
+      ],
+      "notes": "526 MailerLite subscribers. Problem → Guide → Plan → Success."
+    }
+  ]
+}

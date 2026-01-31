@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis Explorer | Ace Second Brain</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            background: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar - File Tree */
+        .sidebar {
+            background: #161b22;
+            border-right: 1px solid #30363d;
+            padding: 15px 0;
+            overflow-y: auto;
+        }
+        
+        .sidebar-header {
+            padding: 0 15px 15px;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-header h1 {
+            font-size: 1rem;
+            color: #58a6ff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .sidebar-header p {
+            font-size: 0.75rem;
+            color: #8b949e;
+            margin-top: 5px;
+        }
+        
+        .tree {
+            font-size: 0.85rem;
+        }
+        
+        .tree-item {
+            padding: 6px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-left: 2px solid transparent;
+        }
+        
+        .tree-item:hover {
+            background: rgba(56, 139, 253, 0.1);
+        }
+        
+        .tree-item.active {
+            background: rgba(56, 139, 253, 0.15);
+            border-left-color: #58a6ff;
+        }
+        
+        .tree-item.folder {
+            color: #8b949e;
+            font-weight: 500;
+        }
+        
+        .tree-item.file {
+            padding-left: 35px;
+        }
+        
+        .tree-item .icon {
+            width: 16px;
+            text-align: center;
+        }
+        
+        .tree-item .name {
+            flex: 1;
+        }
+        
+        .tree-item .count {
+            font-size: 0.7rem;
+            background: #30363d;
+            padding: 2px 6px;
+            border-radius: 10px;
+            color: #8b949e;
+        }
+        
+        /* Main Content */
+        .main {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .toolbar {
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .toolbar .path {
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+        
+        .toolbar .path span {
+            color: #58a6ff;
+        }
+        
+        .toolbar .stats {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        /* JSON Viewer */
+        .json-viewer {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .json-header {
+            background: #161b22;
+            padding: 12px 15px;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .json-header .filename {
+            font-weight: 600;
+            color: #c9d1d9;
+        }
+        
+        .json-header .meta {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+        
+        .json-content {
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        
+        .json-key { color: #79c0ff; }
+        .json-string { color: #a5d6ff; }
+        .json-number { color: #79c0ff; }
+        .json-boolean { color: #ff7b72; }
+        .json-null { color: #8b949e; }
+        
+        /* Cards View */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            color: #c9d1d9;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card-meta {
+            font-size: 0.8rem;
+            color: #8b949e;
+            margin-bottom: 10px;
+        }
+        
+        .card-content {
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+        
+        .card-content ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .card-content li {
+            margin-bottom: 3px;
+        }
+        
+        .badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        .badge.high { background: #f8514966; color: #ff7b72; }
+        .badge.medium { background: #d2992266; color: #e3b341; }
+        .badge.low { background: #23883866; color: #3fb950; }
+        .badge.idea { background: #a371f766; color: #d2a8ff; }
+        .badge.active { background: #58a6ff33; color: #58a6ff; }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #8b949e;
+        }
+        
+        .empty-state .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Summary View */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .summary-card .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+        
+        .summary-card .label {
+            font-size: 0.8rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        .section-title {
+            font-size: 1.1rem;
+            color: #c9d1d9;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>🦀 Genesis</h1>
+                <p>/home/ubuntu/clawd/genesis/</p>
+            </div>
+            
+            <div class="tree">
+                <div class="tree-item folder active" data-view="overview">
+                    <span class="icon">📊</span>
+                    <span class="name">Overview</span>
+                </div>
+                
+                <div class="tree-item folder" data-folder="inbox">
+                    <span class="icon">📥</span>
+                    <span class="name">inbox/</span>
+                </div>
+                <div class="tree-item file" data-file="inbox/captures.json">
+                    <span class="icon">📄</span>
+                    <span class="name">captures.json</span>
+                    <span class="count" id="count-inbox">0</span>
+                </div>
+                
+                <div class="tree-item folder" data-folder="gtd">
+                    <span class="icon">⚡</span>
+                    <span class="name">gtd/</span>
+                </div>
+                <div class="tree-item file" data-file="gtd/next-actions.json">
+                    <span class="icon">📄</span>
+                    <span class="name">next-actions.json</span>
+                    <span class="count" id="count-actions">0</span>
+                </div>
+                <div class="tree-item file" data-file="gtd/waiting-for.json">
+                    <span class="icon">📄</span>
+                    <span class="name">waiting-for.json</span>
+                    <span class="count" id="count-waiting">0</span>
+                </div>
+                <div class="tree-item file" data-file="gtd/someday-maybe.json">
+                    <span class="icon">📄</span>
+                    <span class="name">someday-maybe.json</span>
+                    <span class="count" id="count-someday">0</span>
+                </div>
+                
+                <div class="tree-item folder" data-folder="para">
+                    <span class="icon">📁</span>
+                    <span class="name">para/</span>
+                </div>
+                <div class="tree-item file" data-file="para/projects.json">
+                    <span class="icon">📄</span>
+                    <span class="name">projects.json</span>
+                    <span class="count" id="count-projects">0</span>
+                </div>
+                <div class="tree-item file" data-file="para/areas.json">
+                    <span class="icon">📄</span>
+                    <span class="name">areas.json</span>
+                    <span class="count" id="count-areas">0</span>
+                </div>
+                <div class="tree-item file" data-file="para/resources.json">
+                    <span class="icon">📄</span>
+                    <span class="name">resources.json</span>
+                    <span class="count" id="count-resources">0</span>
+                </div>
+                
+                <div class="tree-item folder" data-folder="knowledge">
+                    <span class="icon">🧠</span>
+                    <span class="name">knowledge/</span>
+                </div>
+                <div class="tree-item file" data-file="knowledge/entries.json">
+                    <span class="icon">📄</span>
+                    <span class="name">entries.json</span>
+                    <span class="count" id="count-knowledge">0</span>
+                </div>
+                
+                <div class="tree-item folder" data-folder="data">
+                    <span class="icon">📊</span>
+                    <span class="name">data/</span>
+                </div>
+                <div class="tree-item file" data-file="data/tasks.json">
+                    <span class="icon">📄</span>
+                    <span class="name">tasks.json</span>
+                </div>
+                <div class="tree-item file" data-file="data/council-context.json">
+                    <span class="icon">📄</span>
+                    <span class="name">council-context.json</span>
+                </div>
+                
+                <div class="tree-item folder" data-folder="archive">
+                    <span class="icon">🗄️</span>
+                    <span class="name">archive/</span>
+                </div>
+                <div class="tree-item file" data-file="archive/completed.json">
+                    <span class="icon">📄</span>
+                    <span class="name">completed.json</span>
+                    <span class="count" id="count-archive">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main">
+            <div class="toolbar">
+                <span class="path">genesis / <span id="current-path">overview</span></span>
+                <span class="stats">Last sync: <span id="last-sync">-</span></span>
+            </div>
+            
+            <div class="content" id="content">
+                <!-- Content loads here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const DATA_BASE = './data/';
+        let allData = {};
+        
+        // File structure
+        const files = {
+            'inbox/captures.json': { key: 'inbox', countKey: 'items' },
+            'gtd/next-actions.json': { key: 'nextActions', countKey: 'items' },
+            'gtd/waiting-for.json': { key: 'waitingFor', countKey: 'items' },
+            'gtd/someday-maybe.json': { key: 'somedayMaybe', countKey: 'items' },
+            'para/projects.json': { key: 'projects', countKey: 'projects' },
+            'para/areas.json': { key: 'areas', countKey: 'areas' },
+            'para/resources.json': { key: 'resources', countKey: 'resources' },
+            'knowledge/entries.json': { key: 'knowledge', countKey: 'entries' },
+            'archive/completed.json': { key: 'archive', countKey: 'items' },
+            'data/tasks.json': { key: 'tasks', countKey: null },
+            'data/council-context.json': { key: 'council', countKey: 'entries' }
+        };
+        
+        // Load all data
+        async function loadAllData() {
+            for (const [path, config] of Object.entries(files)) {
+                try {
+                    const response = await fetch(DATA_BASE + path);
+                    if (response.ok) {
+                        allData[config.key] = await response.json();
+                    }
+                } catch (e) {
+                    console.log('Could not load ' + path);
+                }
+            }
+            updateCounts();
+            showOverview();
+            document.getElementById('last-sync').textContent = new Date().toLocaleString();
+        }
+        
+        function updateCounts() {
+            const counts = {
+                'count-inbox': allData.inbox?.items?.length || 0,
+                'count-actions': allData.nextActions?.items?.length || 0,
+                'count-waiting': allData.waitingFor?.items?.length || 0,
+                'count-someday': allData.somedayMaybe?.items?.length || 0,
+                'count-projects': allData.projects?.projects?.length || 0,
+                'count-areas': allData.areas?.areas?.length || 0,
+                'count-resources': allData.resources?.resources?.length || 0,
+                'count-knowledge': allData.knowledge?.entries?.length || 0,
+                'count-archive': allData.archive?.items?.length || 0
+            };
+            
+            for (const [id, count] of Object.entries(counts)) {
+                const el = document.getElementById(id);
+                if (el) el.textContent = count;
+            }
+        }
+        
+        function syntaxHighlight(json) {
+            if (typeof json !== 'string') {
+                json = JSON.stringify(json, null, 2);
+            }
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                let cls = 'json-number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'json-key';
+                    } else {
+                        cls = 'json-string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'json-boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'json-null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+        
+        function showOverview() {
+            document.getElementById('current-path').textContent = 'overview';
+            
+            const actions = allData.nextActions?.items?.length || 0;
+            const projects = allData.projects?.projects?.length || 0;
+            const waiting = allData.waitingFor?.items?.length || 0;
+            const ideas = allData.somedayMaybe?.items?.length || 0;
+            const knowledge = allData.knowledge?.entries?.length || 0;
+            const areas = allData.areas?.areas?.length || 0;
+            
+            let html = `
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="number">${actions}</div>
+                        <div class="label">Next Actions</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">${projects}</div>
+                        <div class="label">Active Projects</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">${waiting}</div>
+                        <div class="label">Waiting For</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">${ideas}</div>
+                        <div class="label">Ideas</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">${knowledge}</div>
+                        <div class="label">Knowledge Entries</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">${areas}</div>
+                        <div class="label">Areas</div>
+                    </div>
+                </div>
+                
+                <h3 class="section-title">⚡ Next Actions (Due Soon)</h3>
+                <div class="cards">
+            `;
+            
+            const urgentActions = (allData.nextActions?.items || [])
+                .filter(a => a.due)
+                .sort((a, b) => new Date(a.due) - new Date(b.due))
+                .slice(0, 6);
+            
+            urgentActions.forEach(action => {
+                const isOverdue = new Date(action.due) < new Date();
+                html += `
+                    <div class="card">
+                        <div class="card-title">
+                            ${action.action}
+                            <span class="badge ${isOverdue ? 'high' : 'medium'}">${action.due}</span>
+                        </div>
+                        <div class="card-meta">${action.context || ''} ${action.time ? '• ' + action.time : ''}</div>
+                        ${action.notes ? `<div class="card-content">${action.notes}</div>` : ''}
+                    </div>
+                `;
+            });
+            
+            html += `</div>
+                
+                <h3 class="section-title">📁 Active Projects</h3>
+                <div class="cards">
+            `;
+            
+            (allData.projects?.projects || []).forEach(proj => {
+                html += `
+                    <div class="card">
+                        <div class="card-title">
+                            ${proj.name}
+                            <span class="badge ${proj.status === 'active' ? 'active' : 'low'}">${proj.status}</span>
+                        </div>
+                        <div class="card-meta">${proj.area || ''} ${proj.due ? '• Due ' + proj.due : ''}</div>
+                        <div class="card-content">
+                            <strong>Outcome:</strong> ${proj.outcome}
+                            ${proj.nextAction ? `<br><strong>Next:</strong> ${proj.nextAction}` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += `</div>
+                
+                <h3 class="section-title">💭 Someday / Maybe</h3>
+                <div class="cards">
+            `;
+            
+            (allData.somedayMaybe?.items || []).forEach(idea => {
+                html += `
+                    <div class="card">
+                        <div class="card-title">
+                            ${idea.idea}
+                            <span class="badge idea">${idea.category}</span>
+                        </div>
+                        <div class="card-content">${idea.description || ''}</div>
+                    </div>
+                `;
+            });
+            
+            html += `</div>`;
+            
+            document.getElementById('content').innerHTML = html;
+        }
+        
+        function showFile(path) {
+            document.getElementById('current-path').textContent = path;
+            
+            const config = files[path];
+            if (!config || !allData[config.key]) {
+                document.getElementById('content').innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">📭</div>
+                        <p>File not loaded or empty</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            const data = allData[config.key];
+            const json = JSON.stringify(data, null, 2);
+            
+            document.getElementById('content').innerHTML = `
+                <div class="json-viewer">
+                    <div class="json-header">
+                        <span class="filename">${path}</span>
+                        <span class="meta">${json.length} bytes • ${data.updated || 'unknown'}</span>
+                    </div>
+                    <pre class="json-content">${syntaxHighlight(json)}</pre>
+                </div>
+            `;
+        }
+        
+        // Event listeners
+        document.querySelectorAll('.tree-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.tree-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                if (item.dataset.view === 'overview') {
+                    showOverview();
+                } else if (item.dataset.file) {
+                    showFile(item.dataset.file);
+                }
+            });
+        });
+        
+        // Initialize
+        loadAllData();
+    </script>
+</body>
+</html>

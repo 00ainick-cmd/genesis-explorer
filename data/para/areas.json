@@ -1,0 +1,72 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Areas of responsibility - ongoing, no end date",
+  "areas": [
+    {
+      "id": "area-001",
+      "name": "CAET",
+      "description": "Certified Aircraft Electronics Technician program",
+      "standards": [
+        "Maintain certification quality",
+        "Grow technician pipeline",
+        "Industry recognition"
+      ],
+      "activeProjects": ["FAA Meeting Prep", "CAET Advanced Update", "CAET Sales Funnel"]
+    },
+    {
+      "id": "area-002",
+      "name": "AEA",
+      "description": "Aircraft Electronics Association - Nick's employer",
+      "standards": [
+        "Support workforce development mission",
+        "Represent at regionals and conferences",
+        "Maintain industry relationships"
+      ],
+      "activeProjects": ["ATEC Portland Speaking"]
+    },
+    {
+      "id": "area-003",
+      "name": "ACE Avionics",
+      "description": "Online training platform",
+      "standards": [
+        "Keep content current",
+        "Support customers",
+        "Grow subscriber base"
+      ],
+      "activeProjects": []
+    },
+    {
+      "id": "area-004",
+      "name": "Family",
+      "description": "Personal and family responsibilities",
+      "standards": [
+        "Present for Alexis (basketball, school)",
+        "Quality time",
+        "Health and wellness"
+      ],
+      "activeProjects": ["Boss Negotiation - Extra Week Off"]
+    },
+    {
+      "id": "area-005",
+      "name": "Health",
+      "description": "Physical and mental wellness",
+      "standards": [
+        "Regular acupuncture",
+        "Exercise",
+        "Mental clarity"
+      ],
+      "activeProjects": []
+    },
+    {
+      "id": "area-006",
+      "name": "Second Brain",
+      "description": "Ace + Genesis infrastructure",
+      "standards": [
+        "Reliable AI assistant",
+        "Organized knowledge base",
+        "Automated workflows"
+      ],
+      "activeProjects": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Ideas and possibilities for later review",
+  "items": [
+    {
+      "id": "sm-001",
+      "idea": "Meditation app",
+      "description": "Headspace-style guided meditations + timers. Nick keeps coming back to this.",
+      "category": "Product Ideas",
+      "added": "2026-01-30",
+      "notes": "Potential $1M product. Revisit when bandwidth opens."
+    },
+    {
+      "id": "sm-002",
+      "idea": "Assessment Factory as SaaS",
+      "description": "Charge per question generated. Patty Shank quality assessment builder.",
+      "category": "Product Ideas",
+      "added": "2026-01-30",
+      "notes": "App already built. Could productize."
+    },
+    {
+      "id": "sm-003",
+      "idea": "Ancestor Stories product",
+      "description": "Compete with Ancestry.com. Rich narrative stories about ancestors.",
+      "category": "Product Ideas",
+      "added": "2026-01-30",
+      "notes": "Ties to genealogy interest."
+    },
+    {
+      "id": "sm-004",
+      "idea": "Course-in-a-Box engine",
+      "description": "Templated course builder for rapid deployment.",
+      "category": "Product Ideas",
+      "added": "2026-01-30",
+      "notes": null
+    },
+    {
+      "id": "sm-005",
+      "idea": "Europe Regional trip (Cologne Oct 8-9)",
+      "description": "Pitch boss on attending AEA Europe Regional for workforce development.",
+      "category": "Travel",
+      "added": "2026-01-30",
+      "notes": "Could tie to Feb 3 boss meeting or keep separate."
+    },
+    {
+      "id": "sm-006",
+      "idea": "Set up Vercel for private deploys",
+      "description": "Connect GitHub to Vercel for auto-deploy on push.",
+      "category": "Infrastructure",
+      "added": "2026-01-30",
+      "notes": "Low priority. GitHub Pages works for now."
+    }
+  ]
+}

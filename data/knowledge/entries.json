@@ -1,0 +1,221 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-01-30T23:40:00Z",
+  "entries": [
+    {
+      "id": "conf-flag-001",
+      "title": "Confederate Flag - Steel-Manned Defense",
+      "category": "Politics",
+      "tags": ["history", "civil-war", "culture", "debate"],
+      "created": "2026-01-29",
+      "summary": "Nuanced defense of Confederate flag as heritage symbol, acknowledging complexity while steel-manning the position.",
+      "content": {
+        "position": "The Confederate flag can represent Southern heritage and ancestry without endorsing slavery or racism.",
+        "steelManPoints": [
+          "Many descendants honor ancestors who fought, not the institution they fought for",
+          "Historical symbols evolve in meaning (see: American flag for Native Americans)",
+          "Erasing symbols doesn't erase history - may prevent learning from it",
+          "Rural Southern identity is tied to land and lineage, not ideology",
+          "Distinction between battle flag and political Confederate flag often ignored"
+        ],
+        "counterArguments": [
+          "Symbol was revived specifically during Civil Rights era as intimidation",
+          "Intent of user doesn't override impact on Black Americans",
+          "Heritage argument ignores that the heritage includes slavery"
+        ],
+        "nuancedTake": "A person can honor their ancestor's courage while condemning the cause. The flag's meaning depends on context and intent, but we must acknowledge its painful associations for many Americans.",
+        "sources": []
+      }
+    },
+    {
+      "id": "caet-structure-001",
+      "title": "CAET Certification Structure",
+      "category": "AEA",
+      "tags": ["caet", "certification", "workforce", "training"],
+      "created": "2026-01-30",
+      "summary": "Three-tier CAET certification system for avionics technicians.",
+      "content": {
+        "overview": "Developed March 2024 at AEA convention. ~90 people have taken base CAET.",
+        "tiers": {
+          "CAET Base": {
+            "focus": "Entry-level avionics knowledge for Part 145 operations",
+            "format": "Written test",
+            "data": "Excel database with scores, emails, names, companies"
+          },
+          "CAET Advanced": {
+            "focus": "Practical skills - catch-all baseline for all shop types",
+            "components": [
+              "PQS (Personnel Qualification System) - practical tasks",
+              "Oral interview - 2-person workforce committee panel",
+              "Written component"
+            ],
+            "creditPaths": [
+              "AET classes at aet.net/training",
+              "Supervisor sign-off (must be approved CAET Advanced Trainer)"
+            ],
+            "keyPrinciple": "Workforce committee insists on practical qualification, not just written tests (problem with original NCAT AET and FCC GRL)"
+          },
+          "CAET Pro": {
+            "focus": "Manager-level knowledge - running a shop",
+            "topics": [
+              "Quoting customers",
+              "Hangar management",
+              "Taking incoming customers",
+              "Schedule management",
+              "Customer problem resolution",
+              "Dealership requirements",
+              "Becoming a Garmin dealer"
+            ]
+          }
+        },
+        "specialtyEndorsements": ["Aero IT certification", "Connectivity", "Fan CP DLC"],
+        "shopSpectrum": "Basic GA (Piper 140, Cessna 172, Beechcraft + Garmin) → Business jets (Starlink installations)"
+      }
+    },
+    {
+      "id": "atec-conference-2026",
+      "title": "ATEC Conference 2026 - Portland",
+      "category": "Events",
+      "tags": ["atec", "conference", "speaking", "acs"],
+      "created": "2026-01-30",
+      "summary": "Nick speaking at ATEC Portland on ACS modernization panel.",
+      "content": {
+        "event": "ATEC 2026 Annual Conference",
+        "dates": "March 29 - April 1, 2026",
+        "location": "Hilton Portland Downtown, 921 SW Sixth Ave, Portland, OR 97204",
+        "nickPanel": {
+          "title": "Modernizing the Mechanic ACS: Proposed Revision Overview",
+          "date": "Tuesday, March 31, 2026",
+          "time": "10:30 AM - 11:30 AM",
+          "coPanelists": ["Rhonda Cooper (ATEC ACS Working Group Lead)", "Michael Sasso (Aims Community College)"],
+          "topic": "Competency-based training, Bloom's Taxonomy integration, risk-based framing"
+        },
+        "keyContact": {
+          "name": "Crystal Maguire",
+          "title": "Executive Director, ATEC",
+          "phone": "703.548.2030"
+        },
+        "faaAcsUpdate": {
+          "goal": "Update ACS to include CAET - making basic electricity section more avionics-centric",
+          "focusAreas": ["Using a multimeter", "Building a wire harness", "Basic avionics systems"]
+        },
+        "travel": {
+          "arrive": "Monday March 30 AM",
+          "depart": "Wednesday April 1 PM",
+          "flight": "MCI → PDX"
+        },
+        "relatedEvent": {
+          "name": "AEA Convention",
+          "dates": "March 23-26, 2026",
+          "location": "Dallas, Hilton Anatole",
+          "note": "ATEC is right after AEA - 3 days between"
+        }
+      }
+    },
+    {
+      "id": "atec-organization",
+      "title": "ATEC - Aviation Technician Education Council",
+      "category": "Organizations",
+      "tags": ["atec", "part-147", "workforce", "education"],
+      "created": "2026-01-30",
+      "summary": "Trade association for FAA-certificated aviation maintenance technician schools.",
+      "content": {
+        "fullName": "Aviation Technician Education Council",
+        "focus": "Part 147 schools, AMT education, workforce development",
+        "leadership": {
+          "president": "James Hall (also VP Aviation & Workforce Development, WSU Tech)",
+          "executiveDirector": "Crystal Maguire"
+        },
+        "initiatives": ["Choose Aerospace campaign", "Mechanic ACS revision", "Pipeline Report"],
+        "website": "https://www.atec-amt.org",
+        "hq": "PO Box 234, Jenks, OK 74037",
+        "phone": "703.548.2030"
+      }
+    },
+    {
+      "id": "aea-regionals-2026",
+      "title": "AEA Regional Meetings 2026",
+      "category": "Events",
+      "tags": ["aea", "regionals", "travel", "conferences"],
+      "created": "2026-01-30",
+      "summary": "AEA Regional meeting schedule for 2026. Nick attending East, Central, West. Pitching Europe to boss.",
+      "content": {
+        "regionals": [
+          {
+            "name": "Canada Regional",
+            "venue": "Toronto Airport Hilton",
+            "location": "Toronto, ON",
+            "dates": "August 26-27, 2026",
+            "attending": false
+          },
+          {
+            "name": "East Regional",
+            "venue": "Orlando Airport Renaissance",
+            "location": "Orlando, FL",
+            "dates": "September 1-2, 2026",
+            "attending": true
+          },
+          {
+            "name": "South Pacific Regional",
+            "venue": "Hilton Cairns",
+            "location": "Cairns, Australia",
+            "dates": "September 16-17, 2026",
+            "attending": false
+          },
+          {
+            "name": "Europe Regional",
+            "venue": "Hyatt Regency Cologne",
+            "location": "Cologne, Germany",
+            "dates": "October 8-9, 2026",
+            "attending": "pitch to boss - workforce development angle"
+          },
+          {
+            "name": "West Regional",
+            "venue": "Grand Sierra Resort",
+            "location": "Reno, NV",
+            "dates": "October 29-30, 2026",
+            "attending": true
+          },
+          {
+            "name": "Central Regional",
+            "venue": "Hilton KCI Airport Hotel",
+            "location": "Kansas City, MO",
+            "dates": "November 4-5, 2026",
+            "attending": true,
+            "note": "Home turf - no travel needed"
+          }
+        ],
+        "boardMeeting": {
+          "name": "Fall Board of Directors Meeting",
+          "location": "Lee's Summit, MO",
+          "dates": "November 18-19, 2026"
+        }
+      }
+    },
+    {
+      "id": "council-infrastructure-001",
+      "title": "AI Council Infrastructure - Technical Reference",
+      "category": "Infrastructure",
+      "tags": ["discord", "clawdbot", "councils", "architecture"],
+      "created": "2026-01-30",
+      "summary": "Technical reference for running parallel Clawdbot instances for AI councils.",
+      "content": {
+        "architecture": "Parallel Clawdbot instances - each council runs independently on its own port",
+        "portAssignments": {
+          "ace": { "port": 18789, "profile": "default", "configDir": "~/.clawdbot" },
+          "titans": { "port": 18790, "profile": "titans", "configDir": "~/.clawdbot-titans" },
+          "wolfden": { "port": 18795, "profile": "wolfden", "configDir": "~/.clawdbot-wolfden" },
+          "stoics": { "port": 18796, "profile": "stoics", "configDir": "~/.clawdbot-stoics" },
+          "paddys": { "port": 18800, "profile": "paddys", "configDir": "~/.clawdbot-paddys" }
+        },
+        "startupCommand": "CLAWDBOT_GATEWAY_PORT=<port> nohup clawdbot --profile <profile> gateway run > /tmp/<profile>.log 2>&1 &",
+        "criticalNote": "Must set CLAWDBOT_GATEWAY_PORT env var - profile flag alone doesn't read port from config",
+        "healthCheckScript": "~/clawd/scripts/council-health.sh",
+        "lockFiles": "/tmp/clawdbot-1000/gateway.*.lock",
+        "staleLockFix": "Check if PID in lock file is dead, then rm the lock file",
+        "botTokens": "/home/ubuntu/.clawdbot/bot-tokens.json",
+        "webhooks": "/home/ubuntu/.clawdbot/persona-webhooks.json"
+      }
+    }
+  ]
+}

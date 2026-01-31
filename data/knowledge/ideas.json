@@ -1,0 +1,102 @@
+{
+  "updated": "2026-01-31T00:47:00Z",
+  "ideas": [
+    {
+      "id": "assessment-factory",
+      "name": "AI Assessment Factory",
+      "summary": "SaaS tool generating Part 145-aligned assessments with Patty Shank quality",
+      "target": "A&P schools, repair stations, corporate training",
+      "status": "prototype-built",
+      "added": "2026-01-30",
+      "monetization": "Charge per question generated"
+    },
+    {
+      "id": "ancestor-stories",
+      "name": "Ancestor Stories Platform",
+      "summary": "Genealogy + AI narratives. Upload GEDCOM → get Ken Burns-style stories",
+      "target": "Genealogy enthusiasts, Ancestry.com users",
+      "status": "prototype-built",
+      "added": "2026-01-29"
+    },
+    {
+      "id": "meditation-app",
+      "name": "Meditation App",
+      "summary": "Headspace-style guided meditations + timers. Nick keeps coming back to this idea.",
+      "target": "General wellness market",
+      "status": "concept",
+      "added": "2026-01-31",
+      "notes": "Recurring idea - Nick thinks about this often. Someday/maybe bucket."
+    },
+    {
+      "id": "course-in-a-box",
+      "name": "Course-in-a-Box Engine",
+      "summary": "Drop raw technical content → get complete training package (lessons, assessments, labs)",
+      "target": "Corporate training, trade schools",
+      "status": "concept",
+      "added": "2026-01-30"
+    },
+    {
+      "id": "personal-otterbot",
+      "name": "Personal Otterbot",
+      "summary": "Personal AI that joins meetings, transcribes everything, extracts action items/names/decisions automatically. Your own Otter.ai but customized to YOUR context and projects.",
+      "target": "Knowledge workers, solopreneurs, consultants",
+      "status": "concept",
+      "added": "2026-01-30",
+      "notes": "Nick's idea - triggered by the memory/capture problem. Real pain point."
+    },
+    {
+      "id": "gedcom-cleaner",
+      "name": "GEDCOM Tree Cleaner",
+      "summary": "Upload GEDCOM → app cleans/organizes it, charts what records exist per ancestor (census, birth, marriage, death, military), shows what's MISSING. Gap analysis for genealogy.",
+      "target": "Genealogy enthusiasts, family historians, Ancestry/FamilySearch users",
+      "status": "concept",
+      "added": "2026-01-30",
+      "features": [
+        "Parse GEDCOM file",
+        "Organize records by ancestor",
+        "Chart existing records (census, vital, military, etc.)",
+        "Gap analysis - what's missing",
+        "Suggestions for next records to find",
+        "Cool UI: animated tree being pruned/cleaned while processing"
+      ],
+      "notes": "Nick's 5:26 AM idea. Visual of tree being cleaned is the hook."
+    },
+    {
+      "id": "detective-mystery-game",
+      "name": "Myst-Style Detective Game",
+      "summary": "Text-based detective mystery game with atmospheric audio. Interview witnesses, search for clues, solve cases. Scene-based with immersive soundscapes (cafe chatter, glasses clinking, rain, etc.)",
+      "target": "Gamers, puzzle lovers, interactive fiction fans",
+      "status": "concept",
+      "added": "2026-01-30",
+      "inspiration": [
+        "Myst (puzzle adventure)",
+        "Old text-based detective games",
+        "Atmospheric audio design"
+      ],
+      "features": [
+        "Scene-based exploration",
+        "Interview NPCs for clues",
+        "Examine objects/environment",
+        "Atmospheric background audio per scene",
+        "Branching narrative based on choices",
+        "Evidence board / case file mechanic"
+      ],
+      "notes": "Nick's late night idea. The audio atmosphere is the key differentiator - makes text feel alive."
+    }
+  ],
+  "nicks_inspirations": [
+    {
+      "id": "panel-discussion",
+      "idea": "AI Panel Discussion Mode",
+      "description": "Instead of 1:1 with each persona, have them debate as a panel while Nick watches and jumps in. Personas talk to EACH OTHER, not just to Nick. Makes brainstorming feel like a boardroom, not an interrogation.",
+      "use_cases": [
+        "Sales funnel strategy",
+        "Product brainstorming",
+        "Difficult decisions",
+        "Content creation",
+        "Problem solving"
+      ],
+      "added": "2026-01-31"
+    }
+  ]
+}

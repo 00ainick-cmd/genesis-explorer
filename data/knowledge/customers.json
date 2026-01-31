@@ -1,0 +1,30 @@
+{
+  "updated": "2026-01-31T13:43:00Z",
+  "customers": [
+    {
+      "id": "mika-tang",
+      "name": "Mika Tang",
+      "status": "first-customer",
+      "history": [
+        { "course": "AET Course", "when": "long time ago" },
+        { "course": "Recent purchase", "when": "~Dec 2025/Jan 2026" }
+      ],
+      "notes": "Nick's actual first customer. Repeat buyer."
+    },
+    {
+      "id": "michael-schultz",
+      "name": "SGT Michael Schultz",
+      "status": "new-customer",
+      "email_mil": "michael.a.schultz72.mil@army.mil",
+      "email_personal": "michael.txarng@gmail.com",
+      "phone": "(682) 368-2615",
+      "role": "Signal Systems NCOIC",
+      "unit": "Texas Army National Guard",
+      "location": "DFW area",
+      "history": [
+        { "course": "ACE Avionics/CAET", "when": "Jan 2026", "status": "needs-setup" }
+      ],
+      "notes": "Found via Google likely. Signal background = good fit for avionics."
+    }
+  ]
+}

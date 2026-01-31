@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "description": "Council Context Hub - Short-term memory for cross-council awareness",
+    "retention": "7 days rolling",
+    "archive": "Notion monthly"
+  },
+  "lastUpdated": "2026-01-30T19:00:00Z",
+  "entries": []
+}

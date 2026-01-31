@@ -1,0 +1,22 @@
+{
+  "updated": "2026-01-31T00:50:00Z",
+  "description": "Items blocked on someone else",
+  "items": [
+    {
+      "id": "wf-001",
+      "waiting": "Michael (MailerLite) to clarify campaign goals",
+      "for": "Marketing blasts setup",
+      "since": "2026-01-30",
+      "followUp": "2026-02-03",
+      "notes": "Need campaign goals before setting up email sequences"
+    },
+    {
+      "id": "wf-002",
+      "waiting": "AWS security group fix for SSH access",
+      "for": "Server access from new IP",
+      "since": "2026-01-30",
+      "followUp": null,
+      "notes": "Self-service - just need to update security group"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "updated": "2026-01-30T04:39:00Z",
+  "category": "Personal/Family",
+  "entries": [
+    {
+      "id": "alexis-basketball",
+      "topic": "Alexis Mayhew - Basketball",
+      "data": {
+        "name": "Alexis Mayhew",
+        "number": 10,
+        "team": "Lee's Summit West Titans",
+        "sport": "Girls Basketball",
+        "relation": "Nick's daughter"
+      },
+      "tracking": [
+        "Game scores & schedules",
+        "Player highlights",
+        "Local sports news"
+      ],
+      "sources": [
+        "MaxPreps",
+        "KC Star sports",
+        "MSHSAA"
+      ],
+      "added": "2026-01-30"
+    }
+  ]
+}
